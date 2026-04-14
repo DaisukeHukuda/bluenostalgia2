@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Nostalgia Festival 2026 | 2026.8.8 SAT</title>
+  <meta name="description" content="日光初の滞在型カルチャーフェス。音楽・栃木の食・文化・体験型ワークショップが融合。2026年8月8日（土）TORCHキャンピング＆コワーキングスペースにて開催。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== CSS Variables ===== */
+    :root {
+      --sky:          #3a8fc4;
+      --sky-light:    #6ab4de;
+      --sky-pale:     #e8f4fc;
+      --green-fresh:  #3a8c3a;
+      --green-light:  #5db85d;
+      --green-pale:   #edf7ed;
+      --sun-yellow:   #f5c842;
+      --sun-warm:     #f5a623;
+      --orange-cta:   #e06a1a;
+      --orange-deep:  #c05010;
+      --cream:        #fdfaf4;
+      --white:        #ffffff;
+      --text-dark:    #1a2c1a;
+      --text-mid:     #3a4a3a;
+      --text-light:   #6a7a6a;
+      --border:       #d4e8d4;
+      --shadow:       rgba(58, 140, 58, 0.14);
+    }
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul, ol { list-style: none; }
+
+    /* ===== Utility ===== */
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 88px 0; }
+    .section-label {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .section-title {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: clamp(1.9rem, 3.8vw, 2.7rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.25;
+      margin-bottom: 40px;
+    }
+    .section-title span { color: var(--orange-cta); }
+    .divider {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, var(--sky), var(--sky-light));
+      margin-bottom: 24px;
+      border-radius: 2px;
+    }
+    .divider-sun {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, var(--sun-warm), var(--sun-yellow));
+      margin-bottom: 24px;
+      border-radius: 2px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 36px;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      transition: all 0.25s ease;
+      cursor: pointer; border: none;
+    }
+    .btn-primary { background: var(--orange-cta); color: var(--white); }
+    .btn-primary:hover { background: var(--orange-deep); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(224,106,26,0.35); }
+    .btn-sky { background: var(--sky); color: var(--white); }
+    .btn-sky:hover { background: #2a7ab4; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(58,143,196,0.35); }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.8);
+      color: var(--white);
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+    .bg-sky-pale { background: var(--sky-pale); }
+    .bg-green-pale { background: var(--green-pale); }
+    .bg-white { background: var(--white); }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      background:
+        linear-gradient(170deg,
+          rgba(30,90,160,0.82) 0%,
+          rgba(40,120,60,0.65) 55%,
+          rgba(200,130,30,0.5) 100%),
+        url('https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1600&q=80') center/cover no-repeat;
+    }
+    /* Sun rays overlay */
+    .hero-rays {
+      position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 60% 50% at 70% 20%, rgba(245,200,66,0.25) 0%, transparent 60%),
+                  radial-gradient(ellipse 40% 60% at 20% 80%, rgba(58,143,196,0.2) 0%, transparent 55%);
+    }
+    /* Leaf silhouette strip at bottom */
+    .hero-bottom-strip {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(to top, rgba(30,60,30,0.6), transparent);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 900px; margin: 0 auto;
+      padding: 80px 24px 80px;
+      text-align: center;
+    }
+    .hero-badge-row {
+      display: flex; justify-content: center; gap: 10px;
+      flex-wrap: wrap; margin-bottom: 32px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 50px;
+      padding: 7px 18px;
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+    .hero-badge.gold {
+      background: rgba(245,200,66,0.25);
+      border-color: rgba(245,200,66,0.5);
+      color: #ffe88a;
+    }
+    .hero-eyebrow {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(0.9rem, 2vw, 1.15rem);
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.18em;
+      margin-bottom: 14px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7.5vw, 5.6rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 10px;
+      text-shadow: 0 3px 24px rgba(0,0,0,0.3);
+      letter-spacing: 0.02em;
+    }
+    .hero-title .word-blue { color: #87cfff; }
+    .hero-title .word-warm { color: #ffe88a; }
+    .hero-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.2em;
+      margin-bottom: 44px;
+    }
+    .hero-info-bar {
+      display: inline-flex;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 12px;
+      padding: 18px 32px;
+      gap: 36px;
+      margin-bottom: 40px;
+      flex-wrap: wrap; justify-content: center;
+    }
+    .hero-info-item {
+      display: flex; flex-direction: column; align-items: center;
+      color: var(--white);
+    }
+    .hero-info-label { font-size: 0.72rem; letter-spacing: 0.15em; opacity: 0.65; margin-bottom: 3px; }
+    .hero-info-value { font-size: 1rem; font-weight: 700; letter-spacing: 0.04em; }
+    .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+    .hero-slogan {
+      margin-top: 48px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(0.85rem, 2vw, 1rem);
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.25em;
+    }
+    .scroll-hint {
+      position: absolute; bottom: 28px; left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.45);
+      font-size: 0.72rem; letter-spacing: 0.15em;
+      display: flex; flex-direction: column; align-items: center; gap: 5px;
+      animation: bob 2.2s ease-in-out infinite;
+    }
+    .scroll-hint::after { content: '↓'; font-size: 1.1rem; }
+    @keyframes bob {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(7px); }
+    }
+
+    /* ===== Daylight wave dividers ===== */
+    .wave { line-height: 0; }
+    .wave svg { display: block; width: 100%; }
+
+    /* ===== CONCEPT ===== */
+    #concept { padding: 100px 0; }
+    .concept-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 72px;
+      align-items: center;
+    }
+    .concept-text .slogan {
+      font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 24px;
+      line-height: 1.5;
+      padding-left: 18px;
+      border-left: 4px solid var(--sun-warm);
+    }
+    .concept-text p {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      line-height: 2.05;
+      margin-bottom: 18px;
+    }
+    .icon-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 14px; margin-top: 0;
+    }
+    .icon-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 18px;
+      text-align: center;
+      box-shadow: 0 2px 12px var(--shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .icon-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px var(--shadow); }
+    .icon-card .ic { font-size: 2rem; margin-bottom: 8px; }
+    .icon-card p { font-size: 0.88rem; font-weight: 700; color: var(--text-dark); }
+    .concept-visual-stack {
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .concept-highlight-card {
+      background: linear-gradient(135deg, var(--sky) 0%, #1e6ea8 100%);
+      border-radius: 16px;
+      padding: 36px;
+      color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .concept-highlight-card::before {
+      content: '';
+      position: absolute; top: -30px; right: -30px;
+      width: 160px; height: 160px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+    .concept-highlight-card .big-icon { font-size: 2.4rem; margin-bottom: 14px; }
+    .concept-highlight-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: #d0eeff; }
+    .concept-highlight-card p { font-size: 0.95rem; opacity: 0.85; line-height: 1.85; }
+    .concept-sun-card {
+      background: linear-gradient(135deg, var(--sun-warm) 0%, var(--sun-yellow) 100%);
+      border-radius: 14px;
+      padding: 22px 26px;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .concept-sun-card .sun-icon { font-size: 2rem; }
+    .concept-sun-card p { font-size: 0.95rem; font-weight: 700; color: #5a3000; }
+
+    /* ===== TIMETABLE ===== */
+    #timetable { padding: 88px 0; }
+    .tt-header { text-align: center; margin-bottom: 52px; }
+    .tt-note {
+      display: inline-block;
+      background: rgba(58,143,196,0.1);
+      border: 1px dashed var(--sky);
+      border-radius: 8px;
+      padding: 10px 22px;
+      font-size: 0.9rem;
+      color: var(--sky);
+      margin-top: 12px;
+    }
+    .tt-list {
+      max-width: 820px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .tt-row {
+      display: grid; grid-template-columns: 90px 1fr;
+    }
+    .tt-t {
+      padding: 16px 18px 16px 0;
+      font-size: 0.92rem; font-weight: 700;
+      color: var(--text-light);
+      text-align: right;
+      border-right: 2px solid var(--border);
+      position: relative;
+    }
+    .tt-t::after {
+      content: '';
+      position: absolute; right: -7px; top: 22px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--sky-light);
+      border: 3px solid var(--white);
+      box-shadow: 0 0 0 2px var(--sky-light);
+    }
+    .tt-e { padding: 16px 0 16px 22px; }
+    .tt-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 14px 18px;
+      border-left: 4px solid var(--green-fresh);
+      box-shadow: 0 2px 10px var(--shadow);
+      font-size: 1rem;
+    }
+    .tt-card.hl { border-left-color: var(--orange-cta); }
+    .tt-card .name { font-weight: 700; color: var(--text-dark); }
+    .tt-card .desc { font-size: 0.9rem; color: var(--text-light); margin-top: 3px; }
+    .tt-gap { height: 8px; }
+
+    /* ===== ARTISTS ===== */
+    #artists { padding: 88px 0; }
+    .artists-header { text-align: center; margin-bottom: 56px; }
+    .artists-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 28px;
+    }
+    .artist-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px var(--shadow);
+      border: 1.5px solid var(--border);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .artist-card:hover { transform: translateY(-7px); box-shadow: 0 14px 40px var(--shadow); }
+    .artist-img-wrap {
+      height: 300px; overflow: hidden;
+      background: var(--sky-pale);
+      position: relative;
+    }
+    .artist-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .artist-card:hover .artist-img-wrap img { transform: scale(1.05); }
+    .artist-img-wrap .tag-overlay {
+      position: absolute; bottom: 12px; left: 12px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(6px);
+      border-radius: 50px;
+      padding: 4px 14px;
+      font-size: 0.78rem; font-weight: 700;
+      color: var(--sky);
+    }
+    .artist-body { padding: 24px; }
+    .artist-name {
+      font-size: 1.5rem; font-weight: 700;
+      color: var(--text-dark); margin-bottom: 12px;
+    }
+    .artist-name a:hover { color: var(--orange-cta); }
+    .artist-profile { font-size: 0.95rem; color: var(--text-mid); line-height: 1.85; }
+    .artist-link {
+      display: inline-flex; align-items: center; gap: 5px;
+      margin-top: 16px; font-size: 0.9rem; font-weight: 700;
+      color: var(--sky); transition: gap 0.2s;
+    }
+    .artist-link:hover { gap: 10px; }
+    .duo-photos { display: flex; }
+    .duo-photos img { width: 50%; height: 280px; object-fit: cover; }
+
+    /* ===== TICKETS ===== */
+    #tickets { padding: 88px 0; }
+    .tickets-header { text-align: center; margin-bottom: 56px; }
+    .ticket-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 24px; margin-bottom: 48px;
+    }
+    .ticket-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px 28px;
+      box-shadow: 0 4px 20px var(--shadow);
+      border: 1.5px solid var(--border);
+      position: relative; overflow: hidden;
+      transition: transform 0.25s;
+    }
+    .ticket-card:hover { transform: translateY(-4px); }
+    .ticket-card.featured {
+      border: 2px solid var(--orange-cta);
+      background: linear-gradient(170deg, #fff8f3 0%, #ffffff 60%);
+    }
+    .ticket-card.featured::before {
+      content: 'おすすめ';
+      position: absolute; top: 18px; right: -26px;
+      background: var(--orange-cta);
+      color: var(--white);
+      font-size: 0.72rem; font-weight: 700;
+      padding: 4px 36px;
+      transform: rotate(45deg);
+    }
+    .ticket-type { font-size: 0.88rem; font-weight: 700; color: var(--text-light); letter-spacing: 0.08em; margin-bottom: 10px; }
+    .ticket-name { font-size: 1.3rem; font-weight: 700; color: var(--text-dark); margin-bottom: 18px; }
+    .ticket-price { font-size: 2.2rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
+    .ticket-price span { font-size: 1rem; color: var(--text-light); }
+    .ticket-price-note { font-size: 0.9rem; color: var(--text-light); margin-bottom: 24px; }
+    .ticket-features li {
+      font-size: 0.95rem; color: var(--text-mid);
+      padding: 9px 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .ticket-features li::before { content: '✓'; color: var(--green-fresh); font-weight: 700; }
+    .stay-plans { margin-top: 52px; }
+    .stay-plans h3 {
+      font-size: 1.35rem; font-weight: 700;
+      color: var(--text-dark); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .stay-plans h3::before { content: '⛺'; font-size: 1.3rem; }
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 14px;
+      box-shadow: 0 2px 14px var(--shadow);
+    }
+    table { width: 100%; border-collapse: collapse; background: var(--white); font-size: 0.95rem; }
+    thead tr { background: var(--sky); color: var(--white); }
+    thead th { padding: 14px 18px; text-align: left; font-weight: 700; font-size: 0.92rem; }
+    tbody tr { border-bottom: 1px solid #f0f0f0; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody td { padding: 14px 18px; color: var(--text-mid); }
+    tbody tr:nth-child(even) { background: var(--sky-pale); }
+    .price-cell { font-weight: 700; color: var(--orange-cta); }
+    .ticket-notice {
+      background: #fff8f0;
+      border: 1px solid rgba(224,106,26,0.3);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      margin-top: 20px;
+      line-height: 1.8;
+    }
+    .ticket-notice strong { color: var(--orange-cta); }
+
+    /* ===== KITCHEN CAR ===== */
+    #food { padding: 88px 0; }
+    .food-header { text-align: center; margin-bottom: 48px; }
+    .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; }
+    .food-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px var(--shadow);
+      border: 1.5px solid var(--border);
+      display: flex;
+    }
+    .food-img { width: 190px; flex-shrink: 0; background: var(--green-pale); overflow: hidden; }
+    .food-img img { width: 100%; height: 100%; object-fit: cover; }
+    .food-body { padding: 26px; flex: 1; }
+    .food-cat { font-size: 0.84rem; font-weight: 700; color: var(--orange-cta); letter-spacing: 0.1em; margin-bottom: 6px; }
+    .food-name { font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+    .food-loc { font-size: 0.9rem; color: var(--text-light); margin-bottom: 10px; }
+    .food-chef { font-size: 0.93rem; color: var(--text-mid); margin-bottom: 10px; }
+    .award-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: linear-gradient(135deg, #f5d060, #e8a826);
+      color: #5a3800;
+      padding: 4px 14px; border-radius: 50px;
+      font-size: 0.82rem; font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .food-coming {
+      background: #f8fbff;
+      border: 2px dashed var(--sky-light);
+      border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 160px;
+      color: var(--text-light);
+    }
+    .food-coming > div { text-align: center; }
+    .food-coming .icon { font-size: 2.4rem; margin-bottom: 10px; }
+    .food-coming p { font-size: 0.9rem; }
+
+    /* ===== WORKSHOPS ===== */
+    #workshops { padding: 88px 0; }
+    .ws-header { text-align: center; margin-bottom: 56px; }
+    .ws-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+    .ws-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px var(--shadow);
+      border: 1.5px solid var(--border);
+      transition: transform 0.3s;
+    }
+    .ws-card:hover { transform: translateY(-5px); }
+    .ws-img { height: 220px; overflow: hidden; background: var(--green-pale); }
+    .ws-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .ws-card:hover .ws-img img { transform: scale(1.06); }
+    .ws-body { padding: 26px; }
+    .ws-num {
+      font-size: 2.2rem; font-weight: 700;
+      color: #e8f0e8;
+      line-height: 1; margin-bottom: 4px;
+    }
+    .ws-name { font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; }
+    .ws-desc { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; }
+    .ws-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .ws-chip {
+      background: var(--sky-pale);
+      border-radius: 50px;
+      padding: 4px 14px;
+      font-size: 0.88rem;
+      color: var(--sky);
+      font-weight: 500;
+    }
+    .ws-note { font-size: 0.9rem; color: var(--text-light); margin-top: 8px; }
+
+    /* ===== ACCESS ===== */
+    #access { padding: 88px 0; }
+    .access-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: start; }
+    .access-info h3 { font-size: 1.28rem; font-weight: 700; color: var(--text-dark); margin-bottom: 22px; }
+    .access-list li {
+      display: flex; gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.98rem; color: var(--text-mid);
+    }
+    .access-list li:last-child { border-bottom: none; }
+    .a-icon { font-size: 1.15rem; flex-shrink: 0; margin-top: 2px; }
+    .map-box { border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px var(--shadow); border: 2px solid var(--border); }
+    .map-box iframe { width: 100%; height: 380px; border: none; display: block; }
+
+    /* ===== FAQ ===== */
+    #faq { padding: 88px 0; }
+    .faq-header { text-align: center; margin-bottom: 52px; }
+    .faq-list { max-width: 780px; margin: 0 auto; }
+    .faq-item { border-bottom: 1.5px solid var(--border); }
+    .faq-q {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 0;
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--text-dark); text-align: left; gap: 16px;
+      transition: color 0.2s;
+    }
+    .faq-q:hover { color: var(--sky); }
+    .faq-icon {
+      width: 32px; height: 32px; flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--sky-pale);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; color: var(--sky); font-weight: 700;
+      transition: all 0.3s;
+    }
+    .faq-item.open .faq-icon { background: var(--sky); color: var(--white); transform: rotate(45deg); }
+    .faq-a { font-size: 0.98rem; color: var(--text-mid); line-height: 1.9; padding: 0 0 20px; display: none; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ===== CONTACT ===== */
+    #contact { padding: 88px 0; }
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; align-items: start; }
+    .contact-left h2 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+    .contact-left p { font-size: 1rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 28px; }
+    .contact-event-box {
+      background: var(--sky);
+      border-radius: 14px;
+      padding: 22px 24px;
+      color: var(--white);
+    }
+    .contact-event-box p { font-size: 0.93rem; line-height: 1.9; margin: 0; color: rgba(255,255,255,0.9); }
+    .contact-event-box strong { color: #d0eeff; }
+    .contact-form-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 44px;
+      box-shadow: 0 6px 30px var(--shadow);
+      border: 1.5px solid var(--border);
+    }
+    .contact-form-card h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--text-dark); margin-bottom: 6px;
+    }
+    .contact-form-card .sub { font-size: 0.9rem; color: var(--text-light); margin-bottom: 28px; }
+    .form-row { margin-bottom: 18px; }
+    .form-row label { display: block; margin-bottom: 6px; font-size: 0.92rem; font-weight: 700; color: var(--text-mid); }
+    .form-row label span { color: var(--orange-cta); margin-left: 3px; }
+    .form-row input, .form-row textarea, .form-row select {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 1rem; color: var(--text-dark);
+      background: var(--cream);
+      transition: border-color 0.2s;
+      resize: vertical;
+    }
+    .form-row input:focus, .form-row textarea:focus, .form-row select:focus {
+      outline: none; border-color: var(--sky);
+      box-shadow: 0 0 0 3px rgba(58,143,196,0.12);
+    }
+    .form-row textarea { min-height: 120px; }
+    .form-notice { font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px; line-height: 1.7; }
+    .form-submit { width: 100%; padding: 16px; font-size: 1.1rem; border-radius: 50px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .concept-grid { grid-template-columns: 1fr; gap: 40px; }
+      .access-wrap { grid-template-columns: 1fr; }
+      .contact-wrap { grid-template-columns: 1fr; }
+      .food-card { flex-direction: column; }
+      .food-img { width: 100%; height: 200px; }
+      .duo-photos img { height: 180px; }
+      .hero-info-bar { padding: 14px 20px; gap: 20px; }
+    }
+    @media (max-width: 640px) {
+      .section { padding: 60px 0; }
+      .hero-content { padding: 70px 20px 60px; }
+      .contact-form-card { padding: 26px; }
+      table { font-size: 0.85rem; }
+      thead th, tbody td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-rays"></div>
+  <div class="hero-bottom-strip"></div>
+  <div class="hero-content">
+    <div class="hero-badge-row">
+      <div class="hero-badge">📅 2026年8月8日（土）</div>
+      <div class="hero-badge">🕛 12:00 〜 20:00</div>
+      <div class="hero-badge gold">🌿 NIKKO, TOCHIGI</div>
+    </div>
+    <p class="hero-eyebrow">Blue Nostalgia presents</p>
+    <h1 class="hero-title">
+      <span class="word-blue">Blue</span><br>
+      <span>Nostalgia</span><br>
+      <span class="word-warm">Festival</span>
+    </h1>
+    <p class="hero-subtitle">— 原点は、ふるさとに。—</p>
+    <div class="hero-info-bar">
+      <div class="hero-info-item">
+        <span class="hero-info-label">VENUE</span>
+        <span class="hero-info-value">TORCHキャンピング＆コワーキング</span>
+      </div>
+      <div class="hero-info-item">
+        <span class="hero-info-label">TARGET</span>
+        <span class="hero-info-value">延べ 300 名</span>
+      </div>
+      <div class="hero-info-item">
+        <span class="hero-info-label">ARTISTS</span>
+        <span class="hero-info-value">3 組 出演</span>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="#tickets" class="btn btn-primary">🎫 チケットを購入する</a>
+      <a href="#concept" class="btn btn-outline">フェスについて</a>
+    </div>
+    <p class="hero-slogan">音楽 × 栃木の食 × 文化・歴史 × 体験ワークショップ</p>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</section>
+
+<!-- wave: hero → concept -->
+<div class="wave">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,40 C360,70 1080,10 1440,40 L1440,70 L0,70 Z" fill="#fdfaf4"/>
+  </svg>
+</div>
+
+<!-- ===== CONCEPT ===== -->
+<section id="concept" class="section">
+  <div class="container">
+    <div class="concept-grid">
+      <div class="concept-text">
+        <span class="section-label">About the Festival</span>
+        <div class="divider"></div>
+        <h2 class="section-title">原点は、<span>ふるさと</span>に。</h2>
+        <p class="slogan">日光初の滞在型カルチャーフェス、誕生。</p>
+        <p>「音楽」「栃木の食」「文化・歴史」「体験型ワークショップ」を融合した、日光初となる滞在型カルチャーフェスが誕生します。</p>
+        <p>一流アーティストの音楽に包まれながら、風や木々の音、空の色、山の香りに触れる。自然から生まれた栃木の食とともに、五感を解き放ち、郷愁を味わう時間。</p>
+        <p>"ノスタルジー"──それは、自分たちの原点を見つめ直すこと。温故知新の精神のもと、ふるさとにある価値を見つめ直し、そこから新しい文化と未来を生み出すフェスを目指します。</p>
+        <div style="margin-top:32px;">
+          <a href="#tickets" class="btn btn-sky">🎫 チケットを見る</a>
+        </div>
+      </div>
+      <div>
+        <div class="concept-visual-stack">
+          <div class="concept-highlight-card">
+            <div class="big-icon">🎵</div>
+            <h3>音楽 × 自然が融け合う特別な一日</h3>
+            <p>青空の下に広がるステージ。木漏れ日と風を感じながら、ライブミュージックに身を委ねる唯一無二の体験を。</p>
+          </div>
+          <div class="concept-sun-card">
+            <div class="sun-icon">☀️</div>
+            <p>夏の日光・自然の中で五感をひらく、開放感あふれる一日。</p>
+          </div>
+          <div class="icon-grid">
+            <div class="icon-card"><div class="ic">🎸</div><p>ライブ音楽</p></div>
+            <div class="icon-card"><div class="ic">🍜</div><p>栃木の食</p></div>
+            <div class="icon-card"><div class="ic">🥁</div><p>体験WS</p></div>
+            <div class="icon-card"><div class="ic">⛺</div><p>宿泊プラン</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave: concept → timetable -->
+<div class="wave" style="background:#fdfaf4;">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,30 C480,70 960,0 1440,50 L1440,70 L0,70 Z" fill="#e8f4fc"/>
+  </svg>
+</div>
+
+<!-- ===== TIMETABLE ===== -->
+<section id="timetable" style="padding:88px 0;background:var(--sky-pale);">
+  <div class="container">
+    <div class="tt-header">
+      <span class="section-label">Schedule</span>
+      <div class="divider" style="margin:8px auto 0;"></div>
+      <h2 class="section-title" style="margin-bottom:8px;">当日のタイムテーブル</h2>
+      <div class="tt-note">⚠ タイムテーブルは現在調整中です。詳細は決まり次第更新します。</div>
+    </div>
+    <div class="tt-list">
+      <div class="tt-row">
+        <div class="tt-t">12:00</div>
+        <div class="tt-e">
+          <div class="tt-card hl">
+            <div class="name">🎪 会場オープン・受付開始</div>
+            <div class="desc">キャンプサイト・キッチンカー・ワークショップ受付スタート</div>
+          </div>
+        </div>
+      </div>
+      <div class="tt-gap"></div>
+      <div class="tt-row">
+        <div class="tt-t">13:00</div>
+        <div class="tt-e">
+          <div class="tt-card">
+            <div class="name">🥁 体験ワークショップ 第1部</div>
+            <div class="desc">打楽器・和楽器・ピアノ体験（各枠随時受付）</div>
+          </div>
+        </div>
+      </div>
+      <div class="tt-gap"></div>
+      <div class="tt-row">
+        <div class="tt-t">14:00</div>
+        <div class="tt-e">
+          <div class="tt-card hl">
+            <div class="name">🎻 ヴァイオリニスト 高松亜衣 ライブ</div>
+            <div class="desc">詳細は調整中</div>
+          </div>
+        </div>
+      </div>
+      <div class="tt-gap"></div>
+      <div class="tt-row">
+        <div class="tt-t">15:30</div>
+        <div class="tt-e">
+          <div class="tt-card hl">
+            <div class="name">🌸 ぬ。みる ライブ</div>
+            <div class="desc">詳細は調整中</div>
+          </div>
+        </div>
+      </div>
+      <div class="tt-gap"></div>
+      <div class="tt-row">
+        <div class="tt-t">16:30</div>
+        <div class="tt-e">
+          <div class="tt-card">
+            <div class="name">🥁 体験ワークショップ 第2部</div>
+            <div class="desc">打楽器・和楽器・ピアノ体験</div>
+          </div>
+        </div>
+      </div>
+      <div class="tt-gap"></div>
+      <div class="tt-row">
+        <div class="tt-t">18:00</div>
+        <div class="tt-e">
+          <div class="tt-card hl">
+            <div class="name">🎶 Blue Nostalgia ライブ（ヘッドライナー）</div>
+            <div class="desc">吟詠×ピアノ — 大野紘平 × 前田健志</div>
+          </div>
+        </div>
+      </div>
+      <div class="tt-gap"></div>
+      <div class="tt-row">
+        <div class="tt-t">20:00</div>
+        <div class="tt-e">
+          <div class="tt-card">
+            <div class="name">🌙 フィナーレ・閉幕</div>
+            <div class="desc">キャンプ宿泊組はそのままチェックイン</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave: timetable → artists -->
+<div class="wave" style="background:var(--sky-pale);">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,50 C360,10 1080,70 1440,30 L1440,70 L0,70 Z" fill="#fdfaf4"/>
+  </svg>
+</div>
+
+<!-- ===== ARTISTS ===== -->
+<section id="artists" class="section">
+  <div class="container">
+    <div class="artists-header">
+      <span class="section-label">Lineup</span>
+      <div class="divider" style="margin:8px auto 0;"></div>
+      <h2 class="section-title">出演アーティスト</h2>
+    </div>
+    <div class="artists-grid">
+      <!-- 高松亜衣 -->
+      <div class="artist-card">
+        <div class="artist-img-wrap">
+          <img src="https://static.wixstatic.com/media/79c0a1_200e19d0cca048e6b0be2d69ee9b9002~mv2.jpg" alt="高松亜衣" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'height:300px;display:flex;align-items:center;justify-content:center;font-size:4rem;background:#e8f4fc\'>🎻</div>'"/>
+          <div class="tag-overlay">SNS 70万人超</div>
+        </div>
+        <div class="artist-body">
+          <h3 class="artist-name"><a href="https://www.aiai-violin.com/" target="_blank" rel="noopener">高松 亜衣</a></h3>
+          <p class="artist-profile">ヴァイオリニスト。SNS総フォロワー数70万人を超え、幅広い世代に愛されるパフォーマー。その表現力豊かな演奏は国内外で高い評価を受けている。</p>
+          <a href="https://www.aiai-violin.com/" target="_blank" rel="noopener" class="artist-link">公式サイトへ →</a>
+        </div>
+      </div>
+      <!-- ぬ。みる -->
+      <div class="artist-card">
+        <div class="artist-img-wrap">
+          <img src="https://static.wixstatic.com/media/79c0a1_64ed3919f340442d8b7a1a27ba9ddd8c~mv2.jpg" alt="ぬ。みる" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'height:300px;display:flex;align-items:center;justify-content:center;font-size:4rem;background:#e8f4fc\'>🌸</div>'"/>
+          <div class="tag-overlay">栃木市魅力発信特使</div>
+        </div>
+        <div class="artist-body">
+          <h3 class="artist-name"><a href="https://lit.link/en/numarumiru" target="_blank" rel="noopener">ぬ。みる</a></h3>
+          <p class="artist-profile">栃木市魅力発信特使を務める栃木PRアイドル。地元・栃木への愛情あふれる活動と個性的なパフォーマンスで幅広いファンから支持を集める。</p>
+          <a href="https://lit.link/en/numarumiru" target="_blank" rel="noopener" class="artist-link">プロフィールへ →</a>
+        </div>
+      </div>
+      <!-- Blue Nostalgia -->
+      <div class="artist-card">
+        <div class="duo-photos">
+          <img src="https://static.wixstatic.com/media/79c0a1_38388077db454772bd36e9d91ca1ec09~mv2.jpg" alt="大野紘平" loading="lazy" onerror="this.style.background='var(--sky-pale)'"/>
+          <img src="https://static.wixstatic.com/media/79c0a1_38388077db454772bd36e9d91ca1ec09~mv2.jpg" alt="前田健志" loading="lazy" style="filter:brightness(0.88);" onerror="this.style.background='var(--green-pale)'"/>
+        </div>
+        <div class="artist-body">
+          <h3 class="artist-name">Blue Nostalgia</h3>
+          <p class="artist-profile">「とちぎ未来大使」を務めるピアニスト・<a href="https://youtube.com/@kohemaru_piano" target="_blank" rel="noopener" style="color:var(--sky);font-weight:700;">大野紘平</a>と、「富士宮市世界遺産文化交流親善大使」を務める吟詠家/尺八奏者・<a href="https://maeda-kenshi.com/" target="_blank" rel="noopener" style="color:var(--sky);font-weight:700;">前田健志</a>によって結成された音楽ユニット。</p>
+          <p class="artist-profile" style="margin-top:10px;">和と洋の融合による"吟詠×ピアノ"の独自の音の世界を創出。詩的で情感溢れるパフォーマンスは幅広い世代から支持されている。</p>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:28px;font-size:0.95rem;color:var(--text-light);">※ 出演アーティストは今後追加予定</p>
+  </div>
+</section>
+
+<!-- wave: artists → tickets -->
+<div class="wave" style="background:#fdfaf4;">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,20 C480,70 960,0 1440,50 L1440,70 L0,70 Z" fill="#fff8f0"/>
+  </svg>
+</div>
+
+<!-- ===== TICKETS ===== -->
+<section id="tickets" style="padding:88px 0;background:#fff8f0;">
+  <div class="container">
+    <div class="tickets-header">
+      <span class="section-label" style="color:var(--orange-cta);">Tickets</span>
+      <div class="divider-sun" style="margin:8px auto 0;"></div>
+      <h2 class="section-title">チケット情報</h2>
+    </div>
+    <div class="ticket-grid">
+      <div class="ticket-card featured">
+        <div class="ticket-type">入場チケット</div>
+        <div class="ticket-name">🎫 前売券</div>
+        <div class="ticket-price">¥3,000<span> / 1人</span></div>
+        <div class="ticket-price-note">オンライン購入（外部サービス）</div>
+        <ul class="ticket-features">
+          <li>フェス全プログラム入場可能</li>
+          <li>ステージ観覧・ワークショップ参加</li>
+          <li>キッチンカーエリアへのアクセス</li>
+          <li>早期購入で¥500お得</li>
+        </ul>
+        <div style="margin-top:24px;">
+          <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;border-radius:50px;">🎫 前売券を購入する（準備中）</a>
+        </div>
+      </div>
+      <div class="ticket-card">
+        <div class="ticket-type">入場チケット</div>
+        <div class="ticket-name">🎟 当日券</div>
+        <div class="ticket-price">¥3,500<span> / 1人</span></div>
+        <div class="ticket-price-note">当日会場にて販売</div>
+        <ul class="ticket-features">
+          <li>フェス全プログラム入場可能</li>
+          <li>ステージ観覧・ワークショップ参加</li>
+          <li>キッチンカーエリアへのアクセス</li>
+          <li>当日販売 / 売り切れの場合あり</li>
+        </ul>
+        <div style="margin-top:24px;">
+          <div style="background:#f5f5f5;border-radius:10px;padding:14px;text-align:center;font-size:0.92rem;color:var(--text-light);">当日、会場受付にてご購入ください</div>
+        </div>
+      </div>
+    </div>
+    <div class="stay-plans">
+      <h3>宿泊プラン付きチケット（入場券¥3,000 込み）</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>プラン</th><th>定員</th><th>区画数</th><th>追加料金</th><th>備考</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>⛺ ノーマルキャンプサイト（S）</td><td>2名</td><td>全5区画</td><td class="price-cell">+¥3,000 / 1区画1泊</td><td>入場券¥3,000×人数＋¥3,000</td></tr>
+            <tr><td>⛺ ノーマルキャンプサイト（M）</td><td>5名</td><td>全7区画</td><td class="price-cell">+¥7,000 / 1区画1泊</td><td>入場券¥3,000×人数＋¥7,000</td></tr>
+            <tr><td>🚐 トレーラーハウス</td><td>大人3名＋お子様2〜3名</td><td>—</td><td class="price-cell">+¥19,000 / 1日</td><td>入場券¥3,000×大人人数＋¥19,000</td></tr>
+            <tr><td>✨ 手ぶらキャンプ</td><td>2名〜（先着6組限定）</td><td>—</td><td class="price-cell">+¥16,980 / 大人1名1日</td><td>Campify連携 / 機材一式込み</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ticket-notice"><strong>⚠ ご注意：</strong>フェスチケットのお申し込みとは別に、キャンプサイトの予約が必要になります。詳しくはキャンプサイト予約ページをご覧ください。（予約ページURL：準備中）</div>
+    </div>
+  </div>
+</section>
+
+<!-- wave: tickets → food -->
+<div class="wave" style="background:#fff8f0;">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,50 C360,10 1080,70 1440,20 L1440,70 L0,70 Z" fill="#edf7ed"/>
+  </svg>
+</div>
+
+<!-- ===== KITCHEN CAR ===== -->
+<section id="food" style="padding:88px 0;background:var(--green-pale);">
+  <div class="container">
+    <div class="food-header">
+      <span class="section-label" style="color:var(--green-fresh);">Food &amp; Drink</span>
+      <div class="divider" style="margin:8px auto 0;background:linear-gradient(90deg,var(--green-fresh),var(--green-light));"></div>
+      <h2 class="section-title">キッチンカー</h2>
+    </div>
+    <div class="food-grid">
+      <div class="food-card">
+        <div class="food-img">
+          <img src="https://static.wixstatic.com/media/79c0a1_c17439e8a0e1409e8076c5ce1443aa8b~mv2.jpg" alt="広東名菜 好好" loading="lazy" onerror="this.style.display='none'"/>
+        </div>
+        <div class="food-body">
+          <div class="food-cat">🍜 広東料理</div>
+          <div class="food-name">広東名菜 好好</div>
+          <div class="food-loc">📍 栃木県 小山市</div>
+          <div class="food-chef">シェフ：高橋 清</div>
+          <div style="margin-top:8px;">
+            <div class="award-badge">🏆 内閣総理大臣総裁賞受賞</div>
+          </div>
+          <div style="margin-top:6px;">
+            <div class="award-badge" style="background:linear-gradient(135deg,#c8c8c8,#a0a0a0);color:#333;">🥉 第1回世界中国料理大会 第3位</div>
+          </div>
+          <p style="font-size:0.9rem;color:var(--text-light);margin-top:12px;">メニュー詳細：準備中</p>
+        </div>
+      </div>
+      <div class="food-coming">
+        <div>
+          <div class="icon">🚐</div>
+          <p style="font-weight:700;color:var(--text-mid);">出店店舗 追加予定</p>
+          <p style="font-size:0.88rem;margin-top:6px;">詳細は随時更新します</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave: food → workshops -->
+<div class="wave" style="background:var(--green-pale);">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,30 C480,70 960,0 1440,40 L1440,70 L0,70 Z" fill="#fdfaf4"/>
+  </svg>
+</div>
+
+<!-- ===== WORKSHOPS ===== -->
+<section id="workshops" class="section">
+  <div class="container">
+    <div class="ws-header">
+      <span class="section-label">Experience</span>
+      <div class="divider" style="margin:8px auto 0;"></div>
+      <h2 class="section-title">体験型ワークショップ</h2>
+      <p style="color:var(--text-light);font-size:0.95rem;">音楽の楽しさを体で感じる、3つの体験コーナー</p>
+    </div>
+    <div class="ws-grid">
+      <div class="ws-card">
+        <div class="ws-img">
+          <img src="https://static.wixstatic.com/media/79c0a1_b071ff54a060419bb214d7e663cf0cb9~mv2.jpg" alt="打楽器体験" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'height:220px;display:flex;align-items:center;justify-content:center;font-size:4rem;background:#edf7ed\'>🥁</div>'"/>
+        </div>
+        <div class="ws-body">
+          <div class="ws-num">01</div>
+          <div class="ws-name">打楽器体験</div>
+          <p class="ws-desc">太鼓やパーカッションを実際に叩いてみよう！リズム感を体で感じる初心者向け体験コーナー。</p>
+          <div class="ws-chips">
+            <span class="ws-chip">👤 定員：調整中</span>
+            <span class="ws-chip">💴 料金：調整中</span>
+            <span class="ws-chip">⏱ 時間：調整中</span>
+          </div>
+          <p class="ws-note">※ 詳細は決まり次第更新します</p>
+        </div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-img">
+          <img src="https://static.wixstatic.com/media/79c0a1_0bc46a4b959445bbb1f8a1464be1227b~mv2.jpg" alt="和楽器体験" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'height:220px;display:flex;align-items:center;justify-content:center;font-size:4rem;background:#edf7ed\'>🎼</div>'"/>
+        </div>
+        <div class="ws-body">
+          <div class="ws-num">02</div>
+          <div class="ws-name">和楽器体験</div>
+          <p class="ws-desc">尺八・三味線などの和楽器を実際に手に取って体験。日本の伝統的な音の世界に触れるひとときを。</p>
+          <div class="ws-chips">
+            <span class="ws-chip">👤 定員：調整中</span>
+            <span class="ws-chip">💴 料金：調整中</span>
+            <span class="ws-chip">⏱ 時間：調整中</span>
+          </div>
+          <p class="ws-note">※ 詳細は決まり次第更新します</p>
+        </div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-img">
+          <img src="https://static.wixstatic.com/media/79c0a1_170eeee7106f4025bff0cfa001a54cac~mv2.jpg" alt="ピアノ体験" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'height:220px;display:flex;align-items:center;justify-content:center;font-size:4rem;background:#edf7ed\'>🎹</div>'"/>
+        </div>
+        <div class="ws-body">
+          <div class="ws-num">03</div>
+          <div class="ws-name">ピアノ体験</div>
+          <p class="ws-desc">子どもから大人まで気軽に楽しめるピアノ体験。初めての方も歓迎、少し弾けるだけで感動が広がります。</p>
+          <div class="ws-chips">
+            <span class="ws-chip">👤 定員：調整中</span>
+            <span class="ws-chip">💴 料金：調整中</span>
+            <span class="ws-chip">⏱ 時間：調整中</span>
+          </div>
+          <p class="ws-note">※ 詳細は決まり次第更新します</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave: workshops → access -->
+<div class="wave" style="background:#fdfaf4;">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,40 C360,70 1080,0 1440,30 L1440,70 L0,70 Z" fill="#e8f4fc"/>
+  </svg>
+</div>
+
+<!-- ===== ACCESS ===== -->
+<section id="access" style="padding:88px 0;background:var(--sky-pale);">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px;">
+      <span class="section-label">Access</span>
+      <div class="divider" style="margin:8px auto 0;"></div>
+      <h2 class="section-title">アクセス・会場情報</h2>
+    </div>
+    <div class="access-wrap">
+      <div class="access-info">
+        <h3>🏕 TORCHキャンピング＆コワーキングスペース</h3>
+        <ul class="access-list">
+          <li><span class="a-icon">📍</span><div><strong>住所</strong><br>栃木県日光市（詳細住所 準備中）</div></li>
+          <li><span class="a-icon">🚗</span><div><strong>お車でお越しの方</strong><br>駐車場情報 準備中</div></li>
+          <li><span class="a-icon">🚃</span><div><strong>電車でお越しの方</strong><br>アクセス情報 準備中</div></li>
+          <li><span class="a-icon">⛺</span><div><strong>宿泊ご利用の方</strong><br>キャンプサイト / トレーラーハウスあり。チケット購入時に宿泊プランを選択してください。</div></li>
+        </ul>
+        <p style="font-size:0.9rem;color:var(--text-light);margin-top:8px;">※ 詳細なアクセス情報は決まり次第更新します</p>
+      </div>
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51753.74177978456!2d139.5699!3d36.7198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f5d4b3c81e12b%3A0x57e7fd0c083b8a80!2z5pel5YWI5biC!5e0!3m2!1sja!2sjp!4v1713000000000!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="会場マップ"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave: access → faq -->
+<div class="wave" style="background:var(--sky-pale);">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,20 C480,60 960,10 1440,50 L1440,70 L0,70 Z" fill="#fdfaf4"/>
+  </svg>
+</div>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="faq-header">
+      <span class="section-label">FAQ</span>
+      <div class="divider" style="margin:8px auto 0;"></div>
+      <h2 class="section-title">よくある質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">チケットはどこで購入できますか？<span class="faq-icon">+</span></button>
+        <div class="faq-a">前売券はオンラインでご購入いただけます（外部チケットサービス、準備中）。当日券は会場受付にてお買い求めください。なお、前売券は数量限定のため、お早めのご購入をお勧めします。</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">子どもも参加できますか？<span class="faq-icon">+</span></button>
+        <div class="faq-a">はい、お子様連れのご家族も大歓迎です。体験型ワークショップは子どもから大人まで楽しめる内容となっています。お子様のチケット料金については、後日詳細を公開します。</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">キャンプ・宿泊プランの予約方法は？<span class="faq-icon">+</span></button>
+        <div class="faq-a">フェスチケットのご購入とは別に、キャンプサイトの予約が必要となります。手ぶらキャンプはCampify経由でのご予約となります。詳しくは予約ページ（準備中）をご確認ください。</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">雨天の場合はどうなりますか？<span class="faq-icon">+</span></button>
+        <div class="faq-a">雨天決行・荒天中止となります。中止の場合は公式SNSおよびメールにてご連絡します。最新情報は公式SNSをご確認ください。</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">駐車場はありますか？<span class="faq-icon">+</span></button>
+        <div class="faq-a">駐車場情報は現在調整中です。詳細が決まり次第、このページおよび公式SNSにてお知らせします。</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">ワークショップの参加方法は？<span class="faq-icon">+</span></button>
+        <div class="faq-a">ワークショップは当日会場にて随時受け付けます。各ワークショップの定員・料金・所要時間は現在調整中のため、決まり次第お知らせします。</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">ペットは連れていけますか？<span class="faq-icon">+</span></button>
+        <div class="faq-a">ペットの同伴については現在調整中です。詳細が決まり次第お知らせします。不明な点はお問い合わせフォームよりご連絡ください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- wave: faq → contact -->
+<div class="wave" style="background:#fdfaf4;">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,50 C360,10 1080,70 1440,25 L1440,70 L0,70 Z" fill="#e8f4fc"/>
+  </svg>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" style="padding:88px 0;background:var(--sky-pale);">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:56px;">
+      <span class="section-label">Contact</span>
+      <div class="divider" style="margin:8px auto 0;"></div>
+      <h2 class="section-title">お問い合わせ</h2>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-left">
+        <p>チケットや宿泊プラン、ワークショップに関するご不明点は、お気軽にお問い合わせください。お問い合わせ内容を確認の上、3営業日以内にご返信いたします。</p>
+        <div class="contact-event-box">
+          <p><strong>📅 Blue Nostalgia Festival</strong><br>2026年8月8日（土）12:00〜20:00<br>TORCHキャンピング＆コワーキングスペース<br>栃木県 日光市</p>
+          <p style="margin-top:12px;opacity:0.75;font-size:0.88rem;">公式SNS・連絡先：準備中</p>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <h3>お問い合わせフォーム</h3>
+        <p class="sub">※ Wixサイト公開時には、Wix標準フォームに置き換わります。</p>
+        <form onsubmit="return false;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <div class="form-row"><label>お名前<span>*</span></label><input type="text" placeholder="山田 太郎" /></div>
+            <div class="form-row"><label>フリガナ</label><input type="text" placeholder="ヤマダ タロウ" /></div>
+          </div>
+          <div class="form-row"><label>メールアドレス<span>*</span></label><input type="email" placeholder="example@email.com" /></div>
+          <div class="form-row">
+            <label>お問い合わせ種別</label>
+            <select>
+              <option value="">選択してください</option>
+              <option>チケットについて</option>
+              <option>宿泊・キャンプサイトについて</option>
+              <option>ワークショップについて</option>
+              <option>アクセス・駐車場について</option>
+              <option>取材・メディアについて</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="form-row"><label>お問い合わせ内容<span>*</span></label><textarea placeholder="ご質問・ご要望をご記入ください"></textarea></div>
+          <p class="form-notice">送信いただいた個人情報は、お問い合わせへの返信以外には使用いたしません。</p>
+          <button class="btn btn-primary form-submit" type="submit">送信する →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JS ===== -->
+<script>
+  /* FAQ accordion */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+
+  /* Smooth scroll */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  /* Fade-in on scroll */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.artist-card, .ticket-card, .ws-card, .food-card, .icon-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
